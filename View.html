@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Resources/mediaplanner.css" />
+    <script src="Resources/MediaPlanner.js"></script>
+    <title>Media Planner</title>
+</head>
+<body>
+    <script>
+        $(document).ready(function () {
+            $('.calendar-table-container').hoerbigerCalendar();
+        });
+    </script>
+
+    <div class="calendar-container"
+        id="calendar-container">
+        <div class="row filter-container">
+            <select id="ddlProducts">
+                <option selected="selected" value="">Filter by Product</option>
+            </select>
+            <select id="ddlPublications">
+                <option selected="selected" value="">Filter by Publication</option>
+            </select>
+            <select id="ddlRegions">
+                <option selected="selected" value="">Filter by Region</option>
+            </select>
+        </div>
+
+        <div class="calendar-table-container">
+            <div class="row calendar-header">
+                <button class="vertical-center" id="backBtn"><i class="fa fa-chevron-left"></i></button>
+                <button class="vertical-center" id="forwardBtn"><i class="fa fa-chevron-right"></i></button>
+                <div class="vertical-center"><span id="txtCalendarYear"></span></div>
+            </div>
+            <table id="tbl-calendar">
+                <thead id="tbl-header">
+                    <tr>
+                        <th id="label-column-header">Content Type</th>
+                        <th>Jan</th>
+                        <th>Feb</th>
+                        <th>Mar</th>
+                        <th>Apr</th>
+                        <th>May</th>
+                        <th>Jun</th>
+                        <th>Jul</th>
+                        <th>Aug</th>
+                        <th>Sep</th>
+                        <th>Oct</th>
+                        <th>Nov</th>
+                        <th>Dec</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr class="row-group">
+                        <td colspan="13">Print Media</td>
+                    </tr>
+                    <tr id="printadsRow">
+                        <td class="row-name">Print-Ads</td>
+                    </tr>
+                    <tr id="printtechnicalpapersRow">
+                        <td class="row-name">Technical Papers</td>
+                    </tr>
+                    <tr id="pressreleasesRow">
+                        <td class="row-name">Press Releases</td>
+                    </tr>
+                    <tr class="row-group">
+                        <td colspan="13">Online Media</td>
+                    </tr>
+                    <tr id="webinarsRow">
+                        <td class="row-name">Webinars</td>
+                    </tr>
+                    <tr id="onlineadsRow">
+                        <td class="row-name">Online-Ads</td>
+                    </tr>
+                    <tr class="row-group">
+                        <td colspan="13">Speaking Events</td>
+                    </tr>
+                    <tr id="eventtechnicalpapersRow">
+                        <td class="row-name">Technical Papers</td>
+                    </tr>
+                    <tr id="presentationsRow">
+                        <td class="row-name">Presentation</td>
+                    </tr>
+                    <tr id="eventsRow">
+                        <td class="row-name">Events</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row key-container">
+                <div class="planned-key"></div>
+                <div class="vertical-center">
+                    <span>Planned Campagin</span>
+                </div>
+                <div class="active-key"></div>
+                <div class="vertical-center">
+                    <span>Active Campaign</span>
+                </div>
+            </div>
+            <div class="row">
+                <a target="_blank">Download Spreadsheet</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
